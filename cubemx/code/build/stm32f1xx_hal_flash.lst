@@ -1,0 +1,1229 @@
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_flash.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.FLASH_Program_HalfWord,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	FLASH_Program_HalfWord:
+  24              	.LVL0:
+  25              	.LFB76:
+  26              		.file 1 "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c"
+   1:../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c **** 
+  27              		.loc 1 798 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              		.loc 1 800 3 view .LVU1
+  33              		.loc 1 800 20 is_stmt 0 view .LVU2
+  34 0000 044B     		ldr	r3, .L2
+  35 0002 0022     		movs	r2, #0
+  36 0004 DA61     		str	r2, [r3, #28]
+  37              		.loc 1 807 5 is_stmt 1 view .LVU3
+  38 0006 044A     		ldr	r2, .L2+4
+  39 0008 1369     		ldr	r3, [r2, #16]
+  40 000a 43F00103 		orr	r3, r3, #1
+  41 000e 1361     		str	r3, [r2, #16]
+  42              		.loc 1 818 3 view .LVU4
+  43              		.loc 1 818 28 is_stmt 0 view .LVU5
+  44 0010 0180     		strh	r1, [r0]	@ movhi
+  45              		.loc 1 819 1 view .LVU6
+  46 0012 7047     		bx	lr
+  47              	.L3:
+  48              		.align	2
+  49              	.L2:
+  50 0014 00000000 		.word	.LANCHOR0
+  51 0018 00200240 		.word	1073881088
+  52              		.cfi_endproc
+  53              	.LFE76:
+  55              		.section	.text.FLASH_SetErrorCode,"ax",%progbits
+  56              		.align	1
+  57              		.syntax unified
+  58              		.thumb
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 2
+
+
+  59              		.thumb_func
+  60              		.fpu softvfp
+  62              	FLASH_SetErrorCode:
+  63              	.LFB78:
+  64              		.loc 1 915 1 is_stmt 1 view -0
+  65              		.cfi_startproc
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68              		@ link register save eliminated.
+  69              		.loc 1 916 3 view .LVU8
+  70              	.LVL1:
+  71              		.loc 1 921 3 view .LVU9
+  72              		.loc 1 921 6 is_stmt 0 view .LVU10
+  73 0000 194B     		ldr	r3, .L11
+  74 0002 DB68     		ldr	r3, [r3, #12]
+  75              		.loc 1 921 5 view .LVU11
+  76 0004 13F01003 		ands	r3, r3, #16
+  77 0008 05D0     		beq	.L5
+  78              		.loc 1 924 5 is_stmt 1 view .LVU12
+  79              		.loc 1 924 22 is_stmt 0 view .LVU13
+  80 000a 184A     		ldr	r2, .L11+4
+  81 000c D369     		ldr	r3, [r2, #28]
+  82 000e 43F00203 		orr	r3, r3, #2
+  83 0012 D361     		str	r3, [r2, #28]
+  84              		.loc 1 928 5 is_stmt 1 view .LVU14
+  85              	.LVL2:
+  86              		.loc 1 928 11 is_stmt 0 view .LVU15
+  87 0014 1023     		movs	r3, #16
+  88              	.LVL3:
+  89              	.L5:
+  90              		.loc 1 934 3 is_stmt 1 view .LVU16
+  91              		.loc 1 934 6 is_stmt 0 view .LVU17
+  92 0016 144A     		ldr	r2, .L11
+  93 0018 D268     		ldr	r2, [r2, #12]
+  94              		.loc 1 934 5 view .LVU18
+  95 001a 12F0040F 		tst	r2, #4
+  96 001e 06D0     		beq	.L6
+  97              		.loc 1 937 5 is_stmt 1 view .LVU19
+  98              		.loc 1 937 22 is_stmt 0 view .LVU20
+  99 0020 1249     		ldr	r1, .L11+4
+ 100 0022 CA69     		ldr	r2, [r1, #28]
+ 101 0024 42F00102 		orr	r2, r2, #1
+ 102 0028 CA61     		str	r2, [r1, #28]
+ 103              		.loc 1 941 5 is_stmt 1 view .LVU21
+ 104              		.loc 1 941 11 is_stmt 0 view .LVU22
+ 105 002a 43F00403 		orr	r3, r3, #4
+ 106              	.LVL4:
+ 107              	.L6:
+ 108              		.loc 1 944 3 is_stmt 1 view .LVU23
+ 109              		.loc 1 944 6 is_stmt 0 view .LVU24
+ 110 002e 0E4A     		ldr	r2, .L11
+ 111 0030 D269     		ldr	r2, [r2, #28]
+ 112              		.loc 1 944 5 view .LVU25
+ 113 0032 12F0010F 		tst	r2, #1
+ 114 0036 09D0     		beq	.L7
+ 115              		.loc 1 946 5 is_stmt 1 view .LVU26
+ 116              		.loc 1 946 22 is_stmt 0 view .LVU27
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 3
+
+
+ 117 0038 0C49     		ldr	r1, .L11+4
+ 118 003a CA69     		ldr	r2, [r1, #28]
+ 119 003c 42F00402 		orr	r2, r2, #4
+ 120 0040 CA61     		str	r2, [r1, #28]
+ 121              		.loc 1 947 3 is_stmt 1 view .LVU28
+ 122              		.loc 1 947 3 view .LVU29
+ 123              		.loc 1 947 3 view .LVU30
+ 124 0042 0949     		ldr	r1, .L11
+ 125 0044 CA69     		ldr	r2, [r1, #28]
+ 126 0046 22F00102 		bic	r2, r2, #1
+ 127 004a CA61     		str	r2, [r1, #28]
+ 128              	.L7:
+ 129              		.loc 1 947 3 discriminator 4 view .LVU31
+ 130              		.loc 1 951 3 discriminator 4 view .LVU32
+ 131              		.loc 1 951 3 discriminator 4 view .LVU33
+ 132 004c 40F20112 		movw	r2, #257
+ 133 0050 9342     		cmp	r3, r2
+ 134 0052 02D0     		beq	.L10
+ 135              		.loc 1 951 3 discriminator 2 view .LVU34
+ 136 0054 044A     		ldr	r2, .L11
+ 137 0056 D360     		str	r3, [r2, #12]
+ 138              		.loc 1 951 3 discriminator 2 view .LVU35
+ 139              		.loc 1 952 1 is_stmt 0 discriminator 2 view .LVU36
+ 140 0058 7047     		bx	lr
+ 141              	.L10:
+ 142              		.loc 1 951 3 is_stmt 1 discriminator 1 view .LVU37
+ 143 005a 034A     		ldr	r2, .L11
+ 144 005c D369     		ldr	r3, [r2, #28]
+ 145              	.LVL5:
+ 146              		.loc 1 951 3 is_stmt 0 discriminator 1 view .LVU38
+ 147 005e 23F00103 		bic	r3, r3, #1
+ 148 0062 D361     		str	r3, [r2, #28]
+ 149 0064 7047     		bx	lr
+ 150              	.L12:
+ 151 0066 00BF     		.align	2
+ 152              	.L11:
+ 153 0068 00200240 		.word	1073881088
+ 154 006c 00000000 		.word	.LANCHOR0
+ 155              		.cfi_endproc
+ 156              	.LFE78:
+ 158              		.section	.text.HAL_FLASH_Program_IT,"ax",%progbits
+ 159              		.align	1
+ 160              		.global	HAL_FLASH_Program_IT
+ 161              		.syntax unified
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.fpu softvfp
+ 166              	HAL_FLASH_Program_IT:
+ 167              	.LVL6:
+ 168              	.LFB66:
+ 169              		.loc 1 268 1 is_stmt 1 view -0
+ 170              		.cfi_startproc
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 173              		.loc 1 268 1 is_stmt 0 view .LVU40
+ 174 0000 38B5     		push	{r3, r4, r5, lr}
+ 175              	.LCFI0:
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 4
+
+
+ 176              		.cfi_def_cfa_offset 16
+ 177              		.cfi_offset 3, -16
+ 178              		.cfi_offset 4, -12
+ 179              		.cfi_offset 5, -8
+ 180              		.cfi_offset 14, -4
+ 181 0002 1D46     		mov	r5, r3
+ 182              		.loc 1 269 3 is_stmt 1 view .LVU41
+ 183              	.LVL7:
+ 184              		.loc 1 272 3 view .LVU42
+ 185              		.loc 1 272 3 view .LVU43
+ 186 0004 174B     		ldr	r3, .L22
+ 187 0006 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+ 188 0008 012B     		cmp	r3, #1
+ 189 000a 28D0     		beq	.L18
+ 190 000c 8446     		mov	ip, r0
+ 191 000e 0846     		mov	r0, r1
+ 192              	.LVL8:
+ 193              		.loc 1 272 3 is_stmt 0 view .LVU44
+ 194 0010 1446     		mov	r4, r2
+ 195              		.loc 1 272 3 is_stmt 1 discriminator 2 view .LVU45
+ 196 0012 144B     		ldr	r3, .L22
+ 197 0014 0122     		movs	r2, #1
+ 198              	.LVL9:
+ 199              		.loc 1 272 3 is_stmt 0 discriminator 2 view .LVU46
+ 200 0016 1A76     		strb	r2, [r3, #24]
+ 201              		.loc 1 272 3 is_stmt 1 discriminator 2 view .LVU47
+ 202              		.loc 1 275 3 discriminator 2 view .LVU48
+ 203              		.loc 1 276 3 discriminator 2 view .LVU49
+ 204              		.loc 1 297 3 discriminator 2 view .LVU50
+ 205 0018 1349     		ldr	r1, .L22+4
+ 206              	.LVL10:
+ 207              		.loc 1 297 3 is_stmt 0 discriminator 2 view .LVU51
+ 208 001a 0A69     		ldr	r2, [r1, #16]
+ 209 001c 42F4A052 		orr	r2, r2, #5120
+ 210 0020 0A61     		str	r2, [r1, #16]
+ 211              		.loc 1 300 3 is_stmt 1 discriminator 2 view .LVU52
+ 212              		.loc 1 300 18 is_stmt 0 discriminator 2 view .LVU53
+ 213 0022 9860     		str	r0, [r3, #8]
+ 214              		.loc 1 301 3 is_stmt 1 discriminator 2 view .LVU54
+ 215              		.loc 1 301 15 is_stmt 0 discriminator 2 view .LVU55
+ 216 0024 C3E90445 		strd	r4, [r3, #16]
+ 217              		.loc 1 303 3 is_stmt 1 discriminator 2 view .LVU56
+ 218              		.loc 1 303 5 is_stmt 0 discriminator 2 view .LVU57
+ 219 0028 BCF1010F 		cmp	ip, #1
+ 220 002c 0CD0     		beq	.L20
+ 221              		.loc 1 309 8 is_stmt 1 view .LVU58
+ 222              		.loc 1 309 10 is_stmt 0 view .LVU59
+ 223 002e BCF1020F 		cmp	ip, #2
+ 224 0032 0ED0     		beq	.L21
+ 225              		.loc 1 317 5 is_stmt 1 view .LVU60
+ 226              		.loc 1 317 29 is_stmt 0 view .LVU61
+ 227 0034 0B4B     		ldr	r3, .L22
+ 228 0036 0522     		movs	r2, #5
+ 229 0038 1A70     		strb	r2, [r3]
+ 230              		.loc 1 319 5 is_stmt 1 view .LVU62
+ 231              		.loc 1 319 26 is_stmt 0 view .LVU63
+ 232 003a 0422     		movs	r2, #4
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 5
+
+
+ 233 003c 5A60     		str	r2, [r3, #4]
+ 234              	.L16:
+ 235              		.loc 1 323 3 is_stmt 1 view .LVU64
+ 236 003e A1B2     		uxth	r1, r4
+ 237 0040 FFF7FEFF 		bl	FLASH_Program_HalfWord
+ 238              	.LVL11:
+ 239              		.loc 1 325 3 view .LVU65
+ 240              		.loc 1 325 10 is_stmt 0 view .LVU66
+ 241 0044 0020     		movs	r0, #0
+ 242              	.L14:
+ 243              		.loc 1 326 1 view .LVU67
+ 244 0046 38BD     		pop	{r3, r4, r5, pc}
+ 245              	.LVL12:
+ 246              	.L20:
+ 247              		.loc 1 305 5 is_stmt 1 view .LVU68
+ 248              		.loc 1 305 29 is_stmt 0 view .LVU69
+ 249 0048 0322     		movs	r2, #3
+ 250 004a 1A70     		strb	r2, [r3]
+ 251              		.loc 1 307 5 is_stmt 1 view .LVU70
+ 252              		.loc 1 307 26 is_stmt 0 view .LVU71
+ 253 004c 0122     		movs	r2, #1
+ 254 004e 5A60     		str	r2, [r3, #4]
+ 255 0050 F5E7     		b	.L16
+ 256              	.L21:
+ 257              		.loc 1 311 5 is_stmt 1 view .LVU72
+ 258              		.loc 1 311 29 is_stmt 0 view .LVU73
+ 259 0052 044B     		ldr	r3, .L22
+ 260 0054 0422     		movs	r2, #4
+ 261 0056 1A70     		strb	r2, [r3]
+ 262              		.loc 1 313 5 is_stmt 1 view .LVU74
+ 263              		.loc 1 313 26 is_stmt 0 view .LVU75
+ 264 0058 0222     		movs	r2, #2
+ 265 005a 5A60     		str	r2, [r3, #4]
+ 266 005c EFE7     		b	.L16
+ 267              	.LVL13:
+ 268              	.L18:
+ 269              		.loc 1 272 3 view .LVU76
+ 270 005e 0220     		movs	r0, #2
+ 271              	.LVL14:
+ 272              		.loc 1 272 3 view .LVU77
+ 273 0060 F1E7     		b	.L14
+ 274              	.L23:
+ 275 0062 00BF     		.align	2
+ 276              	.L22:
+ 277 0064 00000000 		.word	.LANCHOR0
+ 278 0068 00200240 		.word	1073881088
+ 279              		.cfi_endproc
+ 280              	.LFE66:
+ 282              		.section	.text.HAL_FLASH_EndOfOperationCallback,"ax",%progbits
+ 283              		.align	1
+ 284              		.weak	HAL_FLASH_EndOfOperationCallback
+ 285              		.syntax unified
+ 286              		.thumb
+ 287              		.thumb_func
+ 288              		.fpu softvfp
+ 290              	HAL_FLASH_EndOfOperationCallback:
+ 291              	.LVL15:
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 6
+
+
+ 292              	.LFB68:
+ 293              		.loc 1 607 1 is_stmt 1 view -0
+ 294              		.cfi_startproc
+ 295              		@ args = 0, pretend = 0, frame = 0
+ 296              		@ frame_needed = 0, uses_anonymous_args = 0
+ 297              		@ link register save eliminated.
+ 298              		.loc 1 609 3 view .LVU79
+ 299              		.loc 1 614 1 is_stmt 0 view .LVU80
+ 300 0000 7047     		bx	lr
+ 301              		.cfi_endproc
+ 302              	.LFE68:
+ 304              		.section	.text.HAL_FLASH_OperationErrorCallback,"ax",%progbits
+ 305              		.align	1
+ 306              		.weak	HAL_FLASH_OperationErrorCallback
+ 307              		.syntax unified
+ 308              		.thumb
+ 309              		.thumb_func
+ 310              		.fpu softvfp
+ 312              	HAL_FLASH_OperationErrorCallback:
+ 313              	.LVL16:
+ 314              	.LFB69:
+ 315              		.loc 1 625 1 is_stmt 1 view -0
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 0
+ 318              		@ frame_needed = 0, uses_anonymous_args = 0
+ 319              		@ link register save eliminated.
+ 320              		.loc 1 627 3 view .LVU82
+ 321              		.loc 1 632 1 is_stmt 0 view .LVU83
+ 322 0000 7047     		bx	lr
+ 323              		.cfi_endproc
+ 324              	.LFE69:
+ 326              		.section	.text.HAL_FLASH_IRQHandler,"ax",%progbits
+ 327              		.align	1
+ 328              		.global	HAL_FLASH_IRQHandler
+ 329              		.syntax unified
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.fpu softvfp
+ 334              	HAL_FLASH_IRQHandler:
+ 335              	.LFB67:
+ 336              		.loc 1 333 1 is_stmt 1 view -0
+ 337              		.cfi_startproc
+ 338              		@ args = 0, pretend = 0, frame = 0
+ 339              		@ frame_needed = 0, uses_anonymous_args = 0
+ 340 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 341              	.LCFI1:
+ 342              		.cfi_def_cfa_offset 24
+ 343              		.cfi_offset 3, -24
+ 344              		.cfi_offset 4, -20
+ 345              		.cfi_offset 5, -16
+ 346              		.cfi_offset 6, -12
+ 347              		.cfi_offset 7, -8
+ 348              		.cfi_offset 14, -4
+ 349              		.loc 1 334 3 view .LVU85
+ 350              	.LVL17:
+ 351              		.loc 1 341 3 view .LVU86
+ 352              		.loc 1 341 6 is_stmt 0 view .LVU87
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 7
+
+
+ 353 0002 524B     		ldr	r3, .L44
+ 354 0004 DB68     		ldr	r3, [r3, #12]
+ 355              		.loc 1 341 5 view .LVU88
+ 356 0006 13F0100F 		tst	r3, #16
+ 357 000a 04D1     		bne	.L27
+ 358              		.loc 1 341 48 discriminator 1 view .LVU89
+ 359 000c 4F4B     		ldr	r3, .L44
+ 360 000e DB68     		ldr	r3, [r3, #12]
+ 361              		.loc 1 341 46 discriminator 1 view .LVU90
+ 362 0010 13F0040F 		tst	r3, #4
+ 363 0014 0BD0     		beq	.L28
+ 364              	.L27:
+ 365              		.loc 1 345 5 is_stmt 1 view .LVU91
+ 366              		.loc 1 345 16 is_stmt 0 view .LVU92
+ 367 0016 4E4C     		ldr	r4, .L44+4
+ 368 0018 A568     		ldr	r5, [r4, #8]
+ 369              	.LVL18:
+ 370              		.loc 1 347 5 is_stmt 1 view .LVU93
+ 371              		.loc 1 347 20 is_stmt 0 view .LVU94
+ 372 001a 4FF0FF33 		mov	r3, #-1
+ 373 001e A360     		str	r3, [r4, #8]
+ 374              		.loc 1 350 5 is_stmt 1 view .LVU95
+ 375 0020 FFF7FEFF 		bl	FLASH_SetErrorCode
+ 376              	.LVL19:
+ 377              		.loc 1 353 5 view .LVU96
+ 378 0024 2846     		mov	r0, r5
+ 379 0026 FFF7FEFF 		bl	HAL_FLASH_OperationErrorCallback
+ 380              	.LVL20:
+ 381              		.loc 1 356 5 view .LVU97
+ 382              		.loc 1 356 29 is_stmt 0 view .LVU98
+ 383 002a 0023     		movs	r3, #0
+ 384 002c 2370     		strb	r3, [r4]
+ 385              	.LVL21:
+ 386              	.L28:
+ 387              		.loc 1 366 3 is_stmt 1 view .LVU99
+ 388              		.loc 1 366 6 is_stmt 0 view .LVU100
+ 389 002e 474B     		ldr	r3, .L44
+ 390 0030 DB68     		ldr	r3, [r3, #12]
+ 391              		.loc 1 366 5 view .LVU101
+ 392 0032 13F0200F 		tst	r3, #32
+ 393 0036 2BD0     		beq	.L29
+ 394              		.loc 1 369 5 is_stmt 1 discriminator 2 view .LVU102
+ 395              		.loc 1 369 5 discriminator 2 view .LVU103
+ 396              		.loc 1 369 5 discriminator 2 view .LVU104
+ 397 0038 444B     		ldr	r3, .L44
+ 398 003a 2022     		movs	r2, #32
+ 399 003c DA60     		str	r2, [r3, #12]
+ 400              		.loc 1 369 5 discriminator 2 view .LVU105
+ 401              		.loc 1 373 5 discriminator 2 view .LVU106
+ 402              		.loc 1 373 14 is_stmt 0 discriminator 2 view .LVU107
+ 403 003e 444B     		ldr	r3, .L44+4
+ 404 0040 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 405              		.loc 1 373 7 discriminator 2 view .LVU108
+ 406 0042 2BB3     		cbz	r3, .L29
+ 407              		.loc 1 375 7 is_stmt 1 view .LVU109
+ 408              		.loc 1 375 16 is_stmt 0 view .LVU110
+ 409 0044 424B     		ldr	r3, .L44+4
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 8
+
+
+ 410 0046 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 411 0048 DBB2     		uxtb	r3, r3
+ 412              		.loc 1 375 9 view .LVU111
+ 413 004a 012B     		cmp	r3, #1
+ 414 004c 30D0     		beq	.L39
+ 415              		.loc 1 406 12 is_stmt 1 view .LVU112
+ 416              		.loc 1 406 21 is_stmt 0 view .LVU113
+ 417 004e 404B     		ldr	r3, .L44+4
+ 418 0050 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 419 0052 DBB2     		uxtb	r3, r3
+ 420              		.loc 1 406 14 view .LVU114
+ 421 0054 022B     		cmp	r3, #2
+ 422 0056 4AD0     		beq	.L40
+ 423              		.loc 1 429 9 is_stmt 1 view .LVU115
+ 424              		.loc 1 429 15 is_stmt 0 view .LVU116
+ 425 0058 3D4B     		ldr	r3, .L44+4
+ 426 005a 5A68     		ldr	r2, [r3, #4]
+ 427              		.loc 1 429 29 view .LVU117
+ 428 005c 013A     		subs	r2, r2, #1
+ 429 005e 5A60     		str	r2, [r3, #4]
+ 430              		.loc 1 432 9 is_stmt 1 view .LVU118
+ 431              		.loc 1 432 18 is_stmt 0 view .LVU119
+ 432 0060 5B68     		ldr	r3, [r3, #4]
+ 433              		.loc 1 432 11 view .LVU120
+ 434 0062 002B     		cmp	r3, #0
+ 435 0064 4FD1     		bne	.L41
+ 436              		.loc 1 451 11 is_stmt 1 view .LVU121
+ 437              		.loc 1 451 21 is_stmt 0 view .LVU122
+ 438 0066 3A4B     		ldr	r3, .L44+4
+ 439 0068 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 440 006a DBB2     		uxtb	r3, r3
+ 441              		.loc 1 451 14 view .LVU123
+ 442 006c 032B     		cmp	r3, #3
+ 443 006e 62D0     		beq	.L42
+ 444              		.loc 1 455 16 is_stmt 1 view .LVU124
+ 445              		.loc 1 455 26 is_stmt 0 view .LVU125
+ 446 0070 374B     		ldr	r3, .L44+4
+ 447 0072 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 448 0074 DBB2     		uxtb	r3, r3
+ 449              		.loc 1 455 19 view .LVU126
+ 450 0076 042B     		cmp	r3, #4
+ 451 0078 62D0     		beq	.L43
+ 452              		.loc 1 461 13 is_stmt 1 view .LVU127
+ 453              		.loc 1 461 52 is_stmt 0 view .LVU128
+ 454 007a 354B     		ldr	r3, .L44+4
+ 455 007c 9868     		ldr	r0, [r3, #8]
+ 456              		.loc 1 461 13 view .LVU129
+ 457 007e 0638     		subs	r0, r0, #6
+ 458 0080 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 459              	.LVL22:
+ 460              	.L35:
+ 461              		.loc 1 465 11 is_stmt 1 view .LVU130
+ 462              		.loc 1 465 26 is_stmt 0 view .LVU131
+ 463 0084 324B     		ldr	r3, .L44+4
+ 464 0086 4FF0FF32 		mov	r2, #-1
+ 465 008a 9A60     		str	r2, [r3, #8]
+ 466              		.loc 1 466 11 is_stmt 1 view .LVU132
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 9
+
+
+ 467              		.loc 1 466 35 is_stmt 0 view .LVU133
+ 468 008c 0022     		movs	r2, #0
+ 469 008e 1A70     		strb	r2, [r3]
+ 470              	.L29:
+ 471              		.loc 1 575 3 is_stmt 1 view .LVU134
+ 472              		.loc 1 575 12 is_stmt 0 view .LVU135
+ 473 0090 2F4B     		ldr	r3, .L44+4
+ 474 0092 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 475              		.loc 1 575 5 view .LVU136
+ 476 0094 5BB9     		cbnz	r3, .L26
+ 477              		.loc 1 586 5 is_stmt 1 view .LVU137
+ 478 0096 2D4B     		ldr	r3, .L44
+ 479 0098 1A69     		ldr	r2, [r3, #16]
+ 480 009a 22F00702 		bic	r2, r2, #7
+ 481 009e 1A61     		str	r2, [r3, #16]
+ 482              		.loc 1 589 5 view .LVU138
+ 483 00a0 1A69     		ldr	r2, [r3, #16]
+ 484 00a2 22F4A052 		bic	r2, r2, #5120
+ 485 00a6 1A61     		str	r2, [r3, #16]
+ 486              		.loc 1 593 5 view .LVU139
+ 487              		.loc 1 593 5 view .LVU140
+ 488 00a8 294B     		ldr	r3, .L44+4
+ 489 00aa 0022     		movs	r2, #0
+ 490 00ac 1A76     		strb	r2, [r3, #24]
+ 491              		.loc 1 593 5 view .LVU141
+ 492              	.L26:
+ 493              		.loc 1 595 1 is_stmt 0 view .LVU142
+ 494 00ae F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 495              	.L39:
+ 496              		.loc 1 378 9 is_stmt 1 view .LVU143
+ 497              		.loc 1 378 15 is_stmt 0 view .LVU144
+ 498 00b0 274B     		ldr	r3, .L44+4
+ 499 00b2 5A68     		ldr	r2, [r3, #4]
+ 500              		.loc 1 378 29 view .LVU145
+ 501 00b4 013A     		subs	r2, r2, #1
+ 502 00b6 5A60     		str	r2, [r3, #4]
+ 503              		.loc 1 381 9 is_stmt 1 view .LVU146
+ 504              		.loc 1 381 18 is_stmt 0 view .LVU147
+ 505 00b8 5B68     		ldr	r3, [r3, #4]
+ 506              		.loc 1 381 11 view .LVU148
+ 507 00ba 7BB1     		cbz	r3, .L31
+ 508              		.loc 1 383 11 is_stmt 1 view .LVU149
+ 509              		.loc 1 383 22 is_stmt 0 view .LVU150
+ 510 00bc 244C     		ldr	r4, .L44+4
+ 511 00be A068     		ldr	r0, [r4, #8]
+ 512              	.LVL23:
+ 513              		.loc 1 385 11 is_stmt 1 view .LVU151
+ 514 00c0 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 515              	.LVL24:
+ 516              		.loc 1 388 11 view .LVU152
+ 517              		.loc 1 388 30 is_stmt 0 view .LVU153
+ 518 00c4 A068     		ldr	r0, [r4, #8]
+ 519              		.loc 1 388 22 view .LVU154
+ 520 00c6 00F58060 		add	r0, r0, #1024
+ 521              	.LVL25:
+ 522              		.loc 1 389 11 is_stmt 1 view .LVU155
+ 523              		.loc 1 389 26 is_stmt 0 view .LVU156
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 10
+
+
+ 524 00ca A060     		str	r0, [r4, #8]
+ 525              		.loc 1 392 11 is_stmt 1 view .LVU157
+ 526 00cc 1F4A     		ldr	r2, .L44
+ 527 00ce 1369     		ldr	r3, [r2, #16]
+ 528 00d0 23F00203 		bic	r3, r3, #2
+ 529 00d4 1361     		str	r3, [r2, #16]
+ 530              		.loc 1 394 11 view .LVU158
+ 531 00d6 FFF7FEFF 		bl	FLASH_PageErase
+ 532              	.LVL26:
+ 533              		.loc 1 394 11 is_stmt 0 view .LVU159
+ 534 00da D9E7     		b	.L29
+ 535              	.L31:
+ 536              		.loc 1 400 11 is_stmt 1 view .LVU160
+ 537              	.LVL27:
+ 538              		.loc 1 400 26 is_stmt 0 view .LVU161
+ 539 00dc 1C4B     		ldr	r3, .L44+4
+ 540 00de 4FF0FF30 		mov	r0, #-1
+ 541 00e2 9860     		str	r0, [r3, #8]
+ 542              		.loc 1 401 11 is_stmt 1 view .LVU162
+ 543              		.loc 1 401 35 is_stmt 0 view .LVU163
+ 544 00e4 0022     		movs	r2, #0
+ 545 00e6 1A70     		strb	r2, [r3]
+ 546              		.loc 1 403 11 is_stmt 1 view .LVU164
+ 547 00e8 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 548              	.LVL28:
+ 549 00ec D0E7     		b	.L29
+ 550              	.LVL29:
+ 551              	.L40:
+ 552              		.loc 1 409 9 view .LVU165
+ 553 00ee 174A     		ldr	r2, .L44
+ 554 00f0 1369     		ldr	r3, [r2, #16]
+ 555 00f2 23F00403 		bic	r3, r3, #4
+ 556 00f6 1361     		str	r3, [r2, #16]
+ 557              		.loc 1 418 11 view .LVU166
+ 558 00f8 0020     		movs	r0, #0
+ 559 00fa FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 560              	.LVL30:
+ 561              		.loc 1 421 11 view .LVU167
+ 562              		.loc 1 421 35 is_stmt 0 view .LVU168
+ 563 00fe 144B     		ldr	r3, .L44+4
+ 564 0100 0022     		movs	r2, #0
+ 565 0102 1A70     		strb	r2, [r3]
+ 566 0104 C4E7     		b	.L29
+ 567              	.L41:
+ 568              		.loc 1 435 11 is_stmt 1 view .LVU169
+ 569              		.loc 1 435 26 is_stmt 0 view .LVU170
+ 570 0106 124B     		ldr	r3, .L44+4
+ 571 0108 9A68     		ldr	r2, [r3, #8]
+ 572 010a 0232     		adds	r2, r2, #2
+ 573 010c 9A60     		str	r2, [r3, #8]
+ 574              		.loc 1 436 11 is_stmt 1 view .LVU171
+ 575              		.loc 1 436 22 is_stmt 0 view .LVU172
+ 576 010e 9868     		ldr	r0, [r3, #8]
+ 577              	.LVL31:
+ 578              		.loc 1 439 11 is_stmt 1 view .LVU173
+ 579              		.loc 1 439 32 is_stmt 0 view .LVU174
+ 580 0110 D3E90467 		ldrd	r6, [r3, #16]
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 11
+
+
+ 581              		.loc 1 439 38 view .LVU175
+ 582 0114 340C     		lsrs	r4, r6, #16
+ 583 0116 44EA0744 		orr	r4, r4, r7, lsl #16
+ 584 011a 3D0C     		lsrs	r5, r7, #16
+ 585              		.loc 1 439 23 view .LVU176
+ 586 011c C3E90445 		strd	r4, [r3, #16]
+ 587              		.loc 1 442 11 is_stmt 1 view .LVU177
+ 588 0120 0A49     		ldr	r1, .L44
+ 589 0122 0A69     		ldr	r2, [r1, #16]
+ 590 0124 22F00102 		bic	r2, r2, #1
+ 591 0128 0A61     		str	r2, [r1, #16]
+ 592              		.loc 1 445 11 view .LVU178
+ 593              		.loc 1 445 62 is_stmt 0 view .LVU179
+ 594 012a D3E90423 		ldrd	r2, [r3, #16]
+ 595              		.loc 1 445 11 view .LVU180
+ 596 012e 91B2     		uxth	r1, r2
+ 597 0130 FFF7FEFF 		bl	FLASH_Program_HalfWord
+ 598              	.LVL32:
+ 599              		.loc 1 445 11 view .LVU181
+ 600 0134 ACE7     		b	.L29
+ 601              	.L42:
+ 602              		.loc 1 453 13 is_stmt 1 view .LVU182
+ 603 0136 064B     		ldr	r3, .L44+4
+ 604 0138 9868     		ldr	r0, [r3, #8]
+ 605 013a FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 606              	.LVL33:
+ 607 013e A1E7     		b	.L35
+ 608              	.L43:
+ 609              		.loc 1 457 13 view .LVU183
+ 610              		.loc 1 457 52 is_stmt 0 view .LVU184
+ 611 0140 034B     		ldr	r3, .L44+4
+ 612 0142 9868     		ldr	r0, [r3, #8]
+ 613              		.loc 1 457 13 view .LVU185
+ 614 0144 0238     		subs	r0, r0, #2
+ 615 0146 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 616              	.LVL34:
+ 617 014a 9BE7     		b	.L35
+ 618              	.L45:
+ 619              		.align	2
+ 620              	.L44:
+ 621 014c 00200240 		.word	1073881088
+ 622 0150 00000000 		.word	.LANCHOR0
+ 623              		.cfi_endproc
+ 624              	.LFE67:
+ 626              		.section	.text.HAL_FLASH_Unlock,"ax",%progbits
+ 627              		.align	1
+ 628              		.global	HAL_FLASH_Unlock
+ 629              		.syntax unified
+ 630              		.thumb
+ 631              		.thumb_func
+ 632              		.fpu softvfp
+ 634              	HAL_FLASH_Unlock:
+ 635              	.LFB70:
+ 636              		.loc 1 658 1 is_stmt 1 view -0
+ 637              		.cfi_startproc
+ 638              		@ args = 0, pretend = 0, frame = 0
+ 639              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 12
+
+
+ 640              		@ link register save eliminated.
+ 641              		.loc 1 659 3 view .LVU187
+ 642              	.LVL35:
+ 643              		.loc 1 661 3 view .LVU188
+ 644              		.loc 1 661 6 is_stmt 0 view .LVU189
+ 645 0000 0A4B     		ldr	r3, .L50
+ 646 0002 1B69     		ldr	r3, [r3, #16]
+ 647              		.loc 1 661 5 view .LVU190
+ 648 0004 13F0800F 		tst	r3, #128
+ 649 0008 0BD0     		beq	.L48
+ 650              		.loc 1 664 5 is_stmt 1 view .LVU191
+ 651 000a 084B     		ldr	r3, .L50
+ 652 000c 084A     		ldr	r2, .L50+4
+ 653 000e 5A60     		str	r2, [r3, #4]
+ 654              		.loc 1 665 5 view .LVU192
+ 655 0010 02F18832 		add	r2, r2, #-2004318072
+ 656 0014 5A60     		str	r2, [r3, #4]
+ 657              		.loc 1 668 5 view .LVU193
+ 658              		.loc 1 668 8 is_stmt 0 view .LVU194
+ 659 0016 1B69     		ldr	r3, [r3, #16]
+ 660              		.loc 1 668 7 view .LVU195
+ 661 0018 13F0800F 		tst	r3, #128
+ 662 001c 03D1     		bne	.L49
+ 663              		.loc 1 659 21 view .LVU196
+ 664 001e 0020     		movs	r0, #0
+ 665 0020 7047     		bx	lr
+ 666              	.L48:
+ 667 0022 0020     		movs	r0, #0
+ 668 0024 7047     		bx	lr
+ 669              	.L49:
+ 670              		.loc 1 670 14 view .LVU197
+ 671 0026 0120     		movs	r0, #1
+ 672              	.LVL36:
+ 673              		.loc 1 688 3 is_stmt 1 view .LVU198
+ 674              		.loc 1 689 1 is_stmt 0 view .LVU199
+ 675 0028 7047     		bx	lr
+ 676              	.L51:
+ 677 002a 00BF     		.align	2
+ 678              	.L50:
+ 679 002c 00200240 		.word	1073881088
+ 680 0030 23016745 		.word	1164378403
+ 681              		.cfi_endproc
+ 682              	.LFE70:
+ 684              		.section	.text.HAL_FLASH_Lock,"ax",%progbits
+ 685              		.align	1
+ 686              		.global	HAL_FLASH_Lock
+ 687              		.syntax unified
+ 688              		.thumb
+ 689              		.thumb_func
+ 690              		.fpu softvfp
+ 692              	HAL_FLASH_Lock:
+ 693              	.LFB71:
+ 694              		.loc 1 696 1 is_stmt 1 view -0
+ 695              		.cfi_startproc
+ 696              		@ args = 0, pretend = 0, frame = 0
+ 697              		@ frame_needed = 0, uses_anonymous_args = 0
+ 698              		@ link register save eliminated.
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 13
+
+
+ 699              		.loc 1 698 3 view .LVU201
+ 700 0000 034A     		ldr	r2, .L53
+ 701 0002 1369     		ldr	r3, [r2, #16]
+ 702 0004 43F08003 		orr	r3, r3, #128
+ 703 0008 1361     		str	r3, [r2, #16]
+ 704              		.loc 1 705 3 view .LVU202
+ 705              		.loc 1 706 1 is_stmt 0 view .LVU203
+ 706 000a 0020     		movs	r0, #0
+ 707 000c 7047     		bx	lr
+ 708              	.L54:
+ 709 000e 00BF     		.align	2
+ 710              	.L53:
+ 711 0010 00200240 		.word	1073881088
+ 712              		.cfi_endproc
+ 713              	.LFE71:
+ 715              		.section	.text.HAL_FLASH_OB_Unlock,"ax",%progbits
+ 716              		.align	1
+ 717              		.global	HAL_FLASH_OB_Unlock
+ 718              		.syntax unified
+ 719              		.thumb
+ 720              		.thumb_func
+ 721              		.fpu softvfp
+ 723              	HAL_FLASH_OB_Unlock:
+ 724              	.LFB72:
+ 725              		.loc 1 713 1 is_stmt 1 view -0
+ 726              		.cfi_startproc
+ 727              		@ args = 0, pretend = 0, frame = 0
+ 728              		@ frame_needed = 0, uses_anonymous_args = 0
+ 729              		@ link register save eliminated.
+ 730              		.loc 1 714 3 view .LVU205
+ 731              		.loc 1 714 7 is_stmt 0 view .LVU206
+ 732 0000 074B     		ldr	r3, .L58
+ 733 0002 1B69     		ldr	r3, [r3, #16]
+ 734              		.loc 1 714 6 view .LVU207
+ 735 0004 13F4007F 		tst	r3, #512
+ 736 0008 07D1     		bne	.L57
+ 737              		.loc 1 717 5 is_stmt 1 view .LVU208
+ 738 000a 054B     		ldr	r3, .L58
+ 739 000c 054A     		ldr	r2, .L58+4
+ 740 000e 9A60     		str	r2, [r3, #8]
+ 741              		.loc 1 718 5 view .LVU209
+ 742 0010 02F18832 		add	r2, r2, #-2004318072
+ 743 0014 9A60     		str	r2, [r3, #8]
+ 744              		.loc 1 725 3 view .LVU210
+ 745              		.loc 1 725 10 is_stmt 0 view .LVU211
+ 746 0016 0020     		movs	r0, #0
+ 747 0018 7047     		bx	lr
+ 748              	.L57:
+ 749              		.loc 1 722 12 view .LVU212
+ 750 001a 0120     		movs	r0, #1
+ 751              		.loc 1 726 1 view .LVU213
+ 752 001c 7047     		bx	lr
+ 753              	.L59:
+ 754 001e 00BF     		.align	2
+ 755              	.L58:
+ 756 0020 00200240 		.word	1073881088
+ 757 0024 23016745 		.word	1164378403
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 14
+
+
+ 758              		.cfi_endproc
+ 759              	.LFE72:
+ 761              		.section	.text.HAL_FLASH_OB_Lock,"ax",%progbits
+ 762              		.align	1
+ 763              		.global	HAL_FLASH_OB_Lock
+ 764              		.syntax unified
+ 765              		.thumb
+ 766              		.thumb_func
+ 767              		.fpu softvfp
+ 769              	HAL_FLASH_OB_Lock:
+ 770              	.LFB73:
+ 771              		.loc 1 733 1 is_stmt 1 view -0
+ 772              		.cfi_startproc
+ 773              		@ args = 0, pretend = 0, frame = 0
+ 774              		@ frame_needed = 0, uses_anonymous_args = 0
+ 775              		@ link register save eliminated.
+ 776              		.loc 1 735 3 view .LVU215
+ 777 0000 034A     		ldr	r2, .L61
+ 778 0002 1369     		ldr	r3, [r2, #16]
+ 779 0004 23F40073 		bic	r3, r3, #512
+ 780 0008 1361     		str	r3, [r2, #16]
+ 781              		.loc 1 737 3 view .LVU216
+ 782              		.loc 1 738 1 is_stmt 0 view .LVU217
+ 783 000a 0020     		movs	r0, #0
+ 784 000c 7047     		bx	lr
+ 785              	.L62:
+ 786 000e 00BF     		.align	2
+ 787              	.L61:
+ 788 0010 00200240 		.word	1073881088
+ 789              		.cfi_endproc
+ 790              	.LFE73:
+ 792              		.section	.text.HAL_FLASH_OB_Launch,"ax",%progbits
+ 793              		.align	1
+ 794              		.global	HAL_FLASH_OB_Launch
+ 795              		.syntax unified
+ 796              		.thumb
+ 797              		.thumb_func
+ 798              		.fpu softvfp
+ 800              	HAL_FLASH_OB_Launch:
+ 801              	.LFB74:
+ 802              		.loc 1 746 1 is_stmt 1 view -0
+ 803              		.cfi_startproc
+ 804              		@ args = 0, pretend = 0, frame = 0
+ 805              		@ frame_needed = 0, uses_anonymous_args = 0
+ 806 0000 08B5     		push	{r3, lr}
+ 807              	.LCFI2:
+ 808              		.cfi_def_cfa_offset 8
+ 809              		.cfi_offset 3, -8
+ 810              		.cfi_offset 14, -4
+ 811              		.loc 1 748 3 view .LVU219
+ 812 0002 FFF7FEFF 		bl	HAL_NVIC_SystemReset
+ 813              	.LVL37:
+ 814              		.loc 1 749 1 is_stmt 0 view .LVU220
+ 815 0006 08BD     		pop	{r3, pc}
+ 816              		.cfi_endproc
+ 817              	.LFE74:
+ 819              		.section	.text.HAL_FLASH_GetError,"ax",%progbits
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 15
+
+
+ 820              		.align	1
+ 821              		.global	HAL_FLASH_GetError
+ 822              		.syntax unified
+ 823              		.thumb
+ 824              		.thumb_func
+ 825              		.fpu softvfp
+ 827              	HAL_FLASH_GetError:
+ 828              	.LFB75:
+ 829              		.loc 1 775 1 is_stmt 1 view -0
+ 830              		.cfi_startproc
+ 831              		@ args = 0, pretend = 0, frame = 0
+ 832              		@ frame_needed = 0, uses_anonymous_args = 0
+ 833              		@ link register save eliminated.
+ 834              		.loc 1 776 4 view .LVU222
+ 835              		.loc 1 776 17 is_stmt 0 view .LVU223
+ 836 0000 014B     		ldr	r3, .L66
+ 837 0002 D869     		ldr	r0, [r3, #28]
+ 838              		.loc 1 777 1 view .LVU224
+ 839 0004 7047     		bx	lr
+ 840              	.L67:
+ 841 0006 00BF     		.align	2
+ 842              	.L66:
+ 843 0008 00000000 		.word	.LANCHOR0
+ 844              		.cfi_endproc
+ 845              	.LFE75:
+ 847              		.section	.text.FLASH_WaitForLastOperation,"ax",%progbits
+ 848              		.align	1
+ 849              		.global	FLASH_WaitForLastOperation
+ 850              		.syntax unified
+ 851              		.thumb
+ 852              		.thumb_func
+ 853              		.fpu softvfp
+ 855              	FLASH_WaitForLastOperation:
+ 856              	.LVL38:
+ 857              	.LFB77:
+ 858              		.loc 1 827 1 is_stmt 1 view -0
+ 859              		.cfi_startproc
+ 860              		@ args = 0, pretend = 0, frame = 0
+ 861              		@ frame_needed = 0, uses_anonymous_args = 0
+ 862              		.loc 1 827 1 is_stmt 0 view .LVU226
+ 863 0000 38B5     		push	{r3, r4, r5, lr}
+ 864              	.LCFI3:
+ 865              		.cfi_def_cfa_offset 16
+ 866              		.cfi_offset 3, -16
+ 867              		.cfi_offset 4, -12
+ 868              		.cfi_offset 5, -8
+ 869              		.cfi_offset 14, -4
+ 870 0002 0446     		mov	r4, r0
+ 871              		.loc 1 832 3 is_stmt 1 view .LVU227
+ 872              		.loc 1 832 24 is_stmt 0 view .LVU228
+ 873 0004 FFF7FEFF 		bl	HAL_GetTick
+ 874              	.LVL39:
+ 875              		.loc 1 832 24 view .LVU229
+ 876 0008 0546     		mov	r5, r0
+ 877              	.LVL40:
+ 878              		.loc 1 834 3 is_stmt 1 view .LVU230
+ 879              	.L70:
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 16
+
+
+ 880              		.loc 1 834 8 view .LVU231
+ 881              		.loc 1 834 9 is_stmt 0 view .LVU232
+ 882 000a 164B     		ldr	r3, .L79
+ 883 000c DB68     		ldr	r3, [r3, #12]
+ 884              		.loc 1 834 8 view .LVU233
+ 885 000e 13F0010F 		tst	r3, #1
+ 886 0012 0AD0     		beq	.L78
+ 887              		.loc 1 836 5 is_stmt 1 view .LVU234
+ 888              		.loc 1 836 8 is_stmt 0 view .LVU235
+ 889 0014 B4F1FF3F 		cmp	r4, #-1
+ 890 0018 F7D0     		beq	.L70
+ 891              		.loc 1 838 7 is_stmt 1 view .LVU236
+ 892              		.loc 1 838 9 is_stmt 0 view .LVU237
+ 893 001a 24B1     		cbz	r4, .L71
+ 894              		.loc 1 838 31 discriminator 1 view .LVU238
+ 895 001c FFF7FEFF 		bl	HAL_GetTick
+ 896              	.LVL41:
+ 897              		.loc 1 838 44 discriminator 1 view .LVU239
+ 898 0020 401B     		subs	r0, r0, r5
+ 899              		.loc 1 838 26 discriminator 1 view .LVU240
+ 900 0022 A042     		cmp	r0, r4
+ 901 0024 F1D9     		bls	.L70
+ 902              	.L71:
+ 903              		.loc 1 840 9 is_stmt 1 view .LVU241
+ 904              		.loc 1 840 16 is_stmt 0 view .LVU242
+ 905 0026 0320     		movs	r0, #3
+ 906 0028 1BE0     		b	.L72
+ 907              	.L78:
+ 908              		.loc 1 846 3 is_stmt 1 view .LVU243
+ 909              		.loc 1 846 7 is_stmt 0 view .LVU244
+ 910 002a 0E4B     		ldr	r3, .L79
+ 911 002c DB68     		ldr	r3, [r3, #12]
+ 912              		.loc 1 846 6 view .LVU245
+ 913 002e 13F0200F 		tst	r3, #32
+ 914 0032 02D0     		beq	.L74
+ 915              		.loc 1 849 5 is_stmt 1 discriminator 2 view .LVU246
+ 916              		.loc 1 849 5 discriminator 2 view .LVU247
+ 917              		.loc 1 849 5 discriminator 2 view .LVU248
+ 918 0034 0B4B     		ldr	r3, .L79
+ 919 0036 2022     		movs	r2, #32
+ 920 0038 DA60     		str	r2, [r3, #12]
+ 921              	.L74:
+ 922              		.loc 1 849 5 discriminator 4 view .LVU249
+ 923              		.loc 1 852 3 discriminator 4 view .LVU250
+ 924              		.loc 1 852 6 is_stmt 0 discriminator 4 view .LVU251
+ 925 003a 0A4B     		ldr	r3, .L79
+ 926 003c DB68     		ldr	r3, [r3, #12]
+ 927              		.loc 1 852 5 discriminator 4 view .LVU252
+ 928 003e 13F0100F 		tst	r3, #16
+ 929 0042 0BD1     		bne	.L75
+ 930              		.loc 1 853 6 discriminator 1 view .LVU253
+ 931 0044 074B     		ldr	r3, .L79
+ 932 0046 DB69     		ldr	r3, [r3, #28]
+ 933              		.loc 1 852 47 discriminator 1 view .LVU254
+ 934 0048 13F0010F 		tst	r3, #1
+ 935 004c 06D1     		bne	.L75
+ 936              		.loc 1 854 6 view .LVU255
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 17
+
+
+ 937 004e 054B     		ldr	r3, .L79
+ 938 0050 DB68     		ldr	r3, [r3, #12]
+ 939              		.loc 1 853 47 view .LVU256
+ 940 0052 13F0040F 		tst	r3, #4
+ 941 0056 01D1     		bne	.L75
+ 942              		.loc 1 862 10 view .LVU257
+ 943 0058 0020     		movs	r0, #0
+ 944 005a 02E0     		b	.L72
+ 945              	.L75:
+ 946              		.loc 1 857 5 is_stmt 1 view .LVU258
+ 947 005c FFF7FEFF 		bl	FLASH_SetErrorCode
+ 948              	.LVL42:
+ 949              		.loc 1 858 5 view .LVU259
+ 950              		.loc 1 858 12 is_stmt 0 view .LVU260
+ 951 0060 0120     		movs	r0, #1
+ 952              	.L72:
+ 953              		.loc 1 863 1 view .LVU261
+ 954 0062 38BD     		pop	{r3, r4, r5, pc}
+ 955              	.LVL43:
+ 956              	.L80:
+ 957              		.loc 1 863 1 view .LVU262
+ 958              		.align	2
+ 959              	.L79:
+ 960 0064 00200240 		.word	1073881088
+ 961              		.cfi_endproc
+ 962              	.LFE77:
+ 964              		.section	.text.HAL_FLASH_Program,"ax",%progbits
+ 965              		.align	1
+ 966              		.global	HAL_FLASH_Program
+ 967              		.syntax unified
+ 968              		.thumb
+ 969              		.thumb_func
+ 970              		.fpu softvfp
+ 972              	HAL_FLASH_Program:
+ 973              	.LVL44:
+ 974              	.LFB65:
+ 975              		.loc 1 169 1 is_stmt 1 view -0
+ 976              		.cfi_startproc
+ 977              		@ args = 0, pretend = 0, frame = 0
+ 978              		@ frame_needed = 0, uses_anonymous_args = 0
+ 979              		.loc 1 169 1 is_stmt 0 view .LVU264
+ 980 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 981              	.LCFI4:
+ 982              		.cfi_def_cfa_offset 32
+ 983              		.cfi_offset 3, -32
+ 984              		.cfi_offset 4, -28
+ 985              		.cfi_offset 5, -24
+ 986              		.cfi_offset 6, -20
+ 987              		.cfi_offset 7, -16
+ 988              		.cfi_offset 8, -12
+ 989              		.cfi_offset 9, -8
+ 990              		.cfi_offset 14, -4
+ 991 0004 1E46     		mov	r6, r3
+ 992              		.loc 1 170 3 is_stmt 1 view .LVU265
+ 993              	.LVL45:
+ 994              		.loc 1 171 3 view .LVU266
+ 995              		.loc 1 172 3 view .LVU267
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 18
+
+
+ 996              		.loc 1 175 3 view .LVU268
+ 997              		.loc 1 175 3 view .LVU269
+ 998 0006 244B     		ldr	r3, .L93
+ 999 0008 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+ 1000 000a 012B     		cmp	r3, #1
+ 1001 000c 41D0     		beq	.L87
+ 1002 000e 0446     		mov	r4, r0
+ 1003 0010 0F46     		mov	r7, r1
+ 1004 0012 9046     		mov	r8, r2
+ 1005              		.loc 1 175 3 discriminator 2 view .LVU270
+ 1006 0014 204B     		ldr	r3, .L93
+ 1007 0016 0122     		movs	r2, #1
+ 1008              	.LVL46:
+ 1009              		.loc 1 175 3 is_stmt 0 discriminator 2 view .LVU271
+ 1010 0018 1A76     		strb	r2, [r3, #24]
+ 1011              		.loc 1 175 3 is_stmt 1 discriminator 2 view .LVU272
+ 1012              		.loc 1 178 3 discriminator 2 view .LVU273
+ 1013              		.loc 1 179 3 discriminator 2 view .LVU274
+ 1014              		.loc 1 186 5 discriminator 2 view .LVU275
+ 1015              		.loc 1 186 14 is_stmt 0 discriminator 2 view .LVU276
+ 1016 001a 4CF25030 		movw	r0, #50000
+ 1017              	.LVL47:
+ 1018              		.loc 1 186 14 discriminator 2 view .LVU277
+ 1019 001e FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 1020              	.LVL48:
+ 1021              		.loc 1 196 3 is_stmt 1 discriminator 2 view .LVU278
+ 1022              		.loc 1 196 5 is_stmt 0 discriminator 2 view .LVU279
+ 1023 0022 0346     		mov	r3, r0
+ 1024 0024 78BB     		cbnz	r0, .L83
+ 1025              		.loc 1 198 5 is_stmt 1 view .LVU280
+ 1026              		.loc 1 198 7 is_stmt 0 view .LVU281
+ 1027 0026 012C     		cmp	r4, #1
+ 1028 0028 08D0     		beq	.L88
+ 1029              		.loc 1 203 10 is_stmt 1 view .LVU282
+ 1030              		.loc 1 203 12 is_stmt 0 view .LVU283
+ 1031 002a 022C     		cmp	r4, #2
+ 1032 002c 03D0     		beq	.L91
+ 1033              		.loc 1 211 20 view .LVU284
+ 1034 002e 4FF00409 		mov	r9, #4
+ 1035              	.L84:
+ 1036              	.LVL49:
+ 1037              		.loc 1 214 5 is_stmt 1 view .LVU285
+ 1038              		.loc 1 214 16 is_stmt 0 view .LVU286
+ 1039 0032 1C46     		mov	r4, r3
+ 1040              	.LVL50:
+ 1041              		.loc 1 214 5 view .LVU287
+ 1042 0034 07E0     		b	.L85
+ 1043              	.LVL51:
+ 1044              	.L91:
+ 1045              		.loc 1 206 20 view .LVU288
+ 1046 0036 4FF00209 		mov	r9, #2
+ 1047 003a FAE7     		b	.L84
+ 1048              	.L88:
+ 1049              		.loc 1 201 20 view .LVU289
+ 1050 003c 4FF00109 		mov	r9, #1
+ 1051 0040 F7E7     		b	.L84
+ 1052              	.LVL52:
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 19
+
+
+ 1053              	.L92:
+ 1054              		.loc 1 214 44 is_stmt 1 discriminator 2 view .LVU290
+ 1055              		.loc 1 214 49 is_stmt 0 discriminator 2 view .LVU291
+ 1056 0042 0134     		adds	r4, r4, #1
+ 1057              	.LVL53:
+ 1058              		.loc 1 214 49 discriminator 2 view .LVU292
+ 1059 0044 E4B2     		uxtb	r4, r4
+ 1060              	.LVL54:
+ 1061              	.L85:
+ 1062              		.loc 1 214 22 is_stmt 1 discriminator 1 view .LVU293
+ 1063              		.loc 1 214 5 is_stmt 0 discriminator 1 view .LVU294
+ 1064 0046 4C45     		cmp	r4, r9
+ 1065 0048 1DD2     		bcs	.L83
+ 1066              		.loc 1 216 7 is_stmt 1 view .LVU295
+ 1067              		.loc 1 216 77 is_stmt 0 view .LVU296
+ 1068 004a 2101     		lsls	r1, r4, #4
+ 1069              		.loc 1 216 70 view .LVU297
+ 1070 004c C1F12002 		rsb	r2, r1, #32
+ 1071 0050 A1F12003 		sub	r3, r1, #32
+ 1072              	.LVL55:
+ 1073              		.loc 1 216 70 view .LVU298
+ 1074 0054 28FA01F1 		lsr	r1, r8, r1
+ 1075 0058 06FA02F2 		lsl	r2, r6, r2
+ 1076 005c 1143     		orrs	r1, r1, r2
+ 1077 005e 26FA03F3 		lsr	r3, r6, r3
+ 1078 0062 1943     		orrs	r1, r1, r3
+ 1079              		.loc 1 216 7 view .LVU299
+ 1080 0064 89B2     		uxth	r1, r1
+ 1081 0066 07EB4400 		add	r0, r7, r4, lsl #1
+ 1082 006a FFF7FEFF 		bl	FLASH_Program_HalfWord
+ 1083              	.LVL56:
+ 1084              		.loc 1 223 9 is_stmt 1 view .LVU300
+ 1085              		.loc 1 223 18 is_stmt 0 view .LVU301
+ 1086 006e 4CF25030 		movw	r0, #50000
+ 1087 0072 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 1088              	.LVL57:
+ 1089              		.loc 1 226 9 is_stmt 1 view .LVU302
+ 1090 0076 094B     		ldr	r3, .L93+4
+ 1091 0078 1D69     		ldr	r5, [r3, #16]
+ 1092 007a 25F00105 		bic	r5, r5, #1
+ 1093 007e 1D61     		str	r5, [r3, #16]
+ 1094              		.loc 1 239 7 view .LVU303
+ 1095              		.loc 1 239 10 is_stmt 0 view .LVU304
+ 1096 0080 0346     		mov	r3, r0
+ 1097 0082 0028     		cmp	r0, #0
+ 1098 0084 DDD0     		beq	.L92
+ 1099              	.LVL58:
+ 1100              	.L83:
+ 1101              		.loc 1 247 3 is_stmt 1 view .LVU305
+ 1102              		.loc 1 247 3 view .LVU306
+ 1103 0086 044A     		ldr	r2, .L93
+ 1104 0088 0021     		movs	r1, #0
+ 1105 008a 1176     		strb	r1, [r2, #24]
+ 1106              		.loc 1 247 3 view .LVU307
+ 1107              		.loc 1 249 3 view .LVU308
+ 1108              	.LVL59:
+ 1109              	.L82:
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 20
+
+
+ 1110              		.loc 1 250 1 is_stmt 0 view .LVU309
+ 1111 008c 1846     		mov	r0, r3
+ 1112 008e BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 1113              	.LVL60:
+ 1114              	.L87:
+ 1115              		.loc 1 175 3 view .LVU310
+ 1116 0092 0223     		movs	r3, #2
+ 1117 0094 FAE7     		b	.L82
+ 1118              	.L94:
+ 1119 0096 00BF     		.align	2
+ 1120              	.L93:
+ 1121 0098 00000000 		.word	.LANCHOR0
+ 1122 009c 00200240 		.word	1073881088
+ 1123              		.cfi_endproc
+ 1124              	.LFE65:
+ 1126              		.global	pFlash
+ 1127              		.section	.bss.pFlash,"aw",%nobits
+ 1128              		.align	3
+ 1129              		.set	.LANCHOR0,. + 0
+ 1132              	pFlash:
+ 1133 0000 00000000 		.space	32
+ 1133      00000000 
+ 1133      00000000 
+ 1133      00000000 
+ 1133      00000000 
+ 1134              		.text
+ 1135              	.Letext0:
+ 1136              		.file 2 "../c:\\users\\vd180005d\\desktop\\mips\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-e
+ 1137              		.file 3 "../c:\\users\\vd180005d\\desktop\\mips\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-e
+ 1138              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 1139              		.file 5 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 1140              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 1141              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h"
+ 1142              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 1143              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s 			page 21
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_flash.c
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:16     .text.FLASH_Program_HalfWord:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:23     .text.FLASH_Program_HalfWord:0000000000000000 FLASH_Program_HalfWord
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:50     .text.FLASH_Program_HalfWord:0000000000000014 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:56     .text.FLASH_SetErrorCode:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:62     .text.FLASH_SetErrorCode:0000000000000000 FLASH_SetErrorCode
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:153    .text.FLASH_SetErrorCode:0000000000000068 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:159    .text.HAL_FLASH_Program_IT:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:166    .text.HAL_FLASH_Program_IT:0000000000000000 HAL_FLASH_Program_IT
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:277    .text.HAL_FLASH_Program_IT:0000000000000064 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:283    .text.HAL_FLASH_EndOfOperationCallback:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:290    .text.HAL_FLASH_EndOfOperationCallback:0000000000000000 HAL_FLASH_EndOfOperationCallback
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:305    .text.HAL_FLASH_OperationErrorCallback:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:312    .text.HAL_FLASH_OperationErrorCallback:0000000000000000 HAL_FLASH_OperationErrorCallback
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:327    .text.HAL_FLASH_IRQHandler:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:334    .text.HAL_FLASH_IRQHandler:0000000000000000 HAL_FLASH_IRQHandler
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:621    .text.HAL_FLASH_IRQHandler:000000000000014c $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:627    .text.HAL_FLASH_Unlock:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:634    .text.HAL_FLASH_Unlock:0000000000000000 HAL_FLASH_Unlock
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:679    .text.HAL_FLASH_Unlock:000000000000002c $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:685    .text.HAL_FLASH_Lock:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:692    .text.HAL_FLASH_Lock:0000000000000000 HAL_FLASH_Lock
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:711    .text.HAL_FLASH_Lock:0000000000000010 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:716    .text.HAL_FLASH_OB_Unlock:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:723    .text.HAL_FLASH_OB_Unlock:0000000000000000 HAL_FLASH_OB_Unlock
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:756    .text.HAL_FLASH_OB_Unlock:0000000000000020 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:762    .text.HAL_FLASH_OB_Lock:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:769    .text.HAL_FLASH_OB_Lock:0000000000000000 HAL_FLASH_OB_Lock
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:788    .text.HAL_FLASH_OB_Lock:0000000000000010 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:793    .text.HAL_FLASH_OB_Launch:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:800    .text.HAL_FLASH_OB_Launch:0000000000000000 HAL_FLASH_OB_Launch
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:820    .text.HAL_FLASH_GetError:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:827    .text.HAL_FLASH_GetError:0000000000000000 HAL_FLASH_GetError
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:843    .text.HAL_FLASH_GetError:0000000000000008 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:848    .text.FLASH_WaitForLastOperation:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:855    .text.FLASH_WaitForLastOperation:0000000000000000 FLASH_WaitForLastOperation
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:960    .text.FLASH_WaitForLastOperation:0000000000000064 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:965    .text.HAL_FLASH_Program:0000000000000000 $t
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:972    .text.HAL_FLASH_Program:0000000000000000 HAL_FLASH_Program
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:1121   .text.HAL_FLASH_Program:0000000000000098 $d
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:1132   .bss.pFlash:0000000000000000 pFlash
+C:\Users\VD1800~1\AppData\Local\Temp\ccgvN2Uc.s:1128   .bss.pFlash:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+FLASH_PageErase
+HAL_NVIC_SystemReset
+HAL_GetTick
